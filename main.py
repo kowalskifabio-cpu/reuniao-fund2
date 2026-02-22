@@ -93,14 +93,14 @@ with tab2:
     
     # Lista atualizada com os dados das imagens enviadas
     professores = [
-        {"nome": "Brendon", "materia": "Língua Portuguesa", "foto": "Brendon. Língua Portuguesa.jpg"},
-        {"nome": "Leo", "materia": "Matemática", "foto": "Leo Matemática.jpg"},
-        {"nome": "William", "materia": "História", "foto": "William história.jpg"},
-        {"nome": "José Pedro", "materia": "Geografia", "foto": "José Pedro geografia.jpg"},
-        {"nome": "Ana Desirée", "materia": "Inglês", "foto": "Ana Desirée inglês.jpg"},
-        {"nome": "Luci", "materia": "Ensino Religioso e Arte", "foto": "Luci Ensino Religioso e Arte.jpg"},
-        {"nome": "Maika", "materia": "Filosofia", "foto": "Maika filosofia.jpg"},
-        {"nome": "Evandro", "materia": "Educação Física", "foto": "Evandro educação física.jpg"}
+        {"nome": "Brendon", "materia": "Língua Portuguesa", "foto": "Brendon. Língua Portuguesa.jpeg"},
+        {"nome": "Leo", "materia": "Matemática", "foto": "Leo Matemática.jpeg"},
+        {"nome": "William", "materia": "História", "foto": "William história.jpeg"},
+        {"nome": "José Pedro", "materia": "Geografia", "foto": "José Pedro geografia.jpeg"},
+        {"nome": "Ana Desirée", "materia": "Inglês", "foto": "Ana Desirée inglês.jpeg"},
+        {"nome": "Luci", "materia": "Ensino Religioso e Arte", "foto": "Luci Ensino Religioso e Arte.jpeg"},
+        {"nome": "Maika", "materia": "Filosofia", "foto": "Maika filosofia.jpeg"},
+        {"nome": "Evandro", "materia": "Educação Física", "foto": "Evandro educação física.jpeg"}
     ]
 
     # Organização em colunas (4 por linha)
