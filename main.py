@@ -1,39 +1,18 @@
 import streamlit as st
 
-# Configuração da página - Visual Imersivo e Completo
+# Configuração da página - 100% de aproveitamento de tela
 st.set_page_config(
     page_title="Reunião Pedagógica 2026 - Escola Ursula Benincasa",
     page_icon="🏫",
     layout="wide"
 )
 
-# Estilização CSS para fotos circulares e design limpo
+# Estilização CSS para identidade visual
 st.markdown("""
     <style>
     .stApp { background-color: #F0F7FF; }
     h1, h2, h3 { color: #004A99; font-family: 'Helvetica', sans-serif; margin-top: 0px; }
-    
-    .img-container {
-        text-align: center;
-        padding: 10px;
-        margin-bottom: 20px;
-    }
-    
-    .img-circular {
-        border-radius: 50%;
-        border: 4px solid #004A99;
-        object-fit: cover;
-        width: 150px;
-        height: 150px;
-        margin-bottom: 10px;
-        box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
-    }
-
-    .nome-equipe { font-weight: bold; font-size: 1.1em; margin-bottom: 2px; color: #004A99; }
-    .cargo-equipe { font-size: 0.85em; color: #555; line-height: 1.2; }
-    
-    hr { margin: 2em 0; border: 0; border-top: 1px solid #ddd; }
-    
+    hr { margin: 1em 0; border: 0; border-top: 1px solid #ddd; }
     .qr-container {
         text-align: center;
         background: white;
@@ -44,7 +23,7 @@ st.markdown("""
     </style>
     """, unsafe_allow_html=True)
 
-# URL base do repositório (Link Direto/Raw)
+# URL base do repositório (Link Raw Direto)
 base_url = "https://raw.githubusercontent.com/kowalskifabio-cpu/reuniao-pais-2026/main/"
 
 # Cabeçalho Principal
@@ -57,7 +36,7 @@ with col_titulo:
 
 st.info("**Regra Máxima:** 'Sem outra regra além do amor' — Madre Úrsula Benincasa")
 
-# Abas com 100% de Fidelidade ao Documento Original
+# Abas com 100% do conteúdo original dos slides
 tab1, tab2, tab3, tab4, tab5, tab6, tab7 = st.tabs([
     "🏠 Institucional", "👥 Equipe", "📅 Avisos & Rotina", "⏰ Horários", "📊 Avaliação", "🚌 Projetos", "❓ Dúvidas"
 ])
@@ -75,38 +54,53 @@ with tab1:
 with tab2:
     st.header("Equipe Diretiva")
     c1, c2, c3 = st.columns(3)
-    
     with c1:
-        st.markdown(f'<div class="img-container"><img src="{base_url}logo.jpg" class="img-circular"><div class="nome-equipe">Irmã Olinda</div><div class="cargo-equipe">Diretora</div></div>', unsafe_allow_html=True)
+        st.image(f"{base_url}logo.jpg", width=180, caption="Irmã Olinda - Diretora")
     with c2:
-        st.markdown(f'<div class="img-container"><img src="{base_url}Ingrit.jpg" class="img-circular"><div class="nome-equipe">Ingrit Candido</div><div class="cargo-equipe">Coordenadora Fundamental 2 e<br>Integral Manhã</div></div>', unsafe_allow_html=True)
+        st.image(f"{base_url}Ingrit.jpg", width=180, caption="Ingrit Candido - Coord. Fund 2 e Integral")
     with c3:
-        st.markdown(f'<div class="img-container"><img src="{base_url}Josi.jpg" class="img-circular"><div class="nome-equipe">Josiane Dellaqua</div><div class="cargo-equipe">Coordenadora Ed. Infantil, <br>Fundamental 1 e Integral Tarde</div></div>', unsafe_allow_html=True)
+        st.image(f"{base_url}Josi.jpg", width=180, caption="Josiane Dellaqua - Coord. Infantil e Fund 1")
 
     st.markdown("<hr>", unsafe_allow_html=True)
     st.header("Corpo Docente - Ensino Fundamental 2")
     
-    # Linha 1 de Professores (Carga Individualizada)
+    # Linha 1 de Professores usando st.image nativo (mais seguro para carregar)
     cp1, cp2, cp3, cp4 = st.columns(4)
     with cp1:
-        st.markdown(f'<div class="img-container"><img src="{base_url}ana.jpeg" class="img-circular"><div class="nome-equipe">Ana Desirée</div><div class="cargo-equipe">Inglês</div></div>', unsafe_allow_html=True)
+        st.image(f"{base_url}ana.jpeg", width=150)
+        st.write("**Ana Desirée**")
+        st.caption("Inglês")
     with cp2:
-        st.markdown(f'<div class="img-container"><img src="{base_url}brendon.jpeg" class="img-circular"><div class="nome-equipe">Brendon</div><div class="cargo-equipe">Língua Portuguesa</div></div>', unsafe_allow_html=True)
+        st.image(f"{base_url}brendon.jpeg", width=150)
+        st.write("**Brendon**")
+        st.caption("Língua Portuguesa")
     with cp3:
-        st.markdown(f'<div class="img-container"><img src="{base_url}evandro.jpeg" class="img-circular"><div class="nome-equipe">Evandro</div><div class="cargo-equipe">Educação Física</div></div>', unsafe_allow_html=True)
+        st.image(f"{base_url}evandro.jpeg", width=150)
+        st.write("**Evandro**")
+        st.caption("Educação Física")
     with cp4:
-        st.markdown(f'<div class="img-container"><img src="{base_url}josepedro.jpeg" class="img-circular"><div class="nome-equipe">José Pedro</div><div class="cargo-equipe">Geografia</div></div>', unsafe_allow_html=True)
+        st.image(f"{base_url}josepedro.jpeg", width=150)
+        st.write("**José Pedro**")
+        st.caption("Geografia")
 
     # Linha 2 de Professores
     cp5, cp6, cp7, cp8 = st.columns(4)
     with cp5:
-        st.markdown(f'<div class="img-container"><img src="{base_url}leo.jpeg" class="img-circular"><div class="nome-equipe">Leo</div><div class="cargo-equipe">Matemática</div></div>', unsafe_allow_html=True)
+        st.image(f"{base_url}leo.jpeg", width=150)
+        st.write("**Leo**")
+        st.caption("Matemática")
     with cp6:
-        st.markdown(f'<div class="img-container"><img src="{base_url}luci.jpeg" class="img-circular"><div class="nome-equipe">Luci</div><div class="cargo-equipe">Ensino Religioso e Arte</div></div>', unsafe_allow_html=True)
+        st.image(f"{base_url}luci.jpeg", width=150)
+        st.write("**Luci**")
+        st.caption("Ensino Religioso e Arte")
     with cp7:
-        st.markdown(f'<div class="img-container"><img src="{base_url}maika.jpeg" class="img-circular"><div class="nome-equipe">Maika</div><div class="cargo-equipe">Filosofia</div></div>', unsafe_allow_html=True)
+        st.image(f"{base_url}maika.jpeg", width=150)
+        st.write("**Maika**")
+        st.caption("Filosofia")
     with cp8:
-        st.markdown(f'<div class="img-container"><img src="{base_url}william.jpeg" class="img-circular"><div class="nome-equipe">William</div><div class="cargo-equipe">História</div></div>', unsafe_allow_html=True)
+        st.image(f"{base_url}william.jpeg", width=150)
+        st.write("**William**")
+        st.caption("História")
 
 with tab3:
     st.header("Orientações Educacionais e Avisos")
@@ -165,7 +159,6 @@ with tab6:
     st.write("Objetivo: experiências concretas em teatros, museus, parques e grutas.")
     st.write("- Acompanhamento total por professores e funcionários.")
     st.write("- **Obrigatória autorização prévia dos pais**.")
-    st.write("- Custos de transporte/ingressos informados previamente.")
     st.write("---")
     st.write("### 🧠 Sala de Recursos (Neurodivergentes)")
     st.write("Previsão de inauguração: **Julho**.")
@@ -175,7 +168,7 @@ with tab7:
     st.write("Caso sua dúvida não tenha sido abordada no tempo da reunião, utilize nosso canal oficial abaixo:")
     st.markdown(f"""
     <div class="qr-container">
-        <h3>Acesse nosso Formulário de Dúvidas e Sugestões</h3>
+        <h3>Acesse nosso Formulário de Dúvidas</h3>
         <p>Aponte a câmera do seu celular para o QR Code abaixo.</p>
         <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://reuniao-pais-2026.streamlit.app" width="200">
     </div>
