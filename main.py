@@ -35,10 +35,13 @@ st.markdown("""
     </style>
     """, unsafe_allow_html=True)
 
+# URL base do seu repositório para as imagens
+base_url = "https://raw.githubusercontent.com/kowalskifabio-cpu/reuniao-pais-2026/main/"
+
 # Cabeçalho
 col_logo, col_titulo = st.columns([1, 4])
 with col_logo:
-    st.image("https://raw.githubusercontent.com/kowalskifabio-cpu/reuniao-pais-2026/main/logo.jpg", width=140)
+    st.image(f"{base_url}logo.jpg", width=140)
 with col_titulo:
     st.title("Reunião Pedagógica 2026")
     st.subheader("Escola Ursula Benincasa — Irmãs Teatinas")
@@ -66,21 +69,21 @@ with tab2:
     
     with c1:
         st.markdown(f'''<div class="img-container">
-            <img src="https://raw.githubusercontent.com/kowalskifabio-cpu/reuniao-pais-2026/main/logo.jpg" class="img-circular">
+            <img src="{base_url}logo.jpg" class="img-circular">
             <div class="nome-equipe">Irmã Olinda</div>
             <div class="cargo-equipe">Diretora</div>
         </div>''', unsafe_allow_html=True)
 
     with c2:
         st.markdown(f'''<div class="img-container">
-            <img src="https://raw.githubusercontent.com/kowalskifabio-cpu/reuniao-pais-2026/main/Ingrit.jpg" class="img-circular">
+            <img src="{base_url}Ingrit.jpg" class="img-circular">
             <div class="nome-equipe">Ingrit Candido</div>
             <div class="cargo-equipe">Coordenadora Fundamental 2 e<br>Integral Manhã</div>
         </div>''', unsafe_allow_html=True)
 
     with c3:
         st.markdown(f'''<div class="img-container">
-            <img src="https://raw.githubusercontent.com/kowalskifabio-cpu/reuniao-pais-2026/main/Josi.jpg" class="img-circular">
+            <img src="{base_url}Josi.jpg" class="img-circular">
             <div class="nome-equipe">Josiane Dellaqua</div>
             <div class="cargo-equipe">Coordenadora Ed. Infantil, <br>Fundamental 1 e Integral Tarde</div>
         </div>''', unsafe_allow_html=True)
@@ -88,24 +91,26 @@ with tab2:
     st.markdown("<hr>", unsafe_allow_html=True)
     st.header("Corpo Docente - Ensino Fundamental 2")
     
-    # Lista de professores do Fund 2 (ajuste os nomes conforme sua lista final)
+    # Lista atualizada com os dados das imagens enviadas
     professores = [
-        {"nome": "Prof. de Português", "materia": "Língua Portuguesa"},
-        {"nome": "Prof. de Matemática", "materia": "Matemática"},
-        {"nome": "Prof. de História", "materia": "História"},
-        {"nome": "Prof. de Geografia", "materia": "Geografia"},
-        {"nome": "Prof. de Ciências", "materia": "Ciências"},
-        {"nome": "Prof. de Inglês", "materia": "Língua Inglesa"},
-        {"nome": "Prof. de Arte", "materia": "Arte"},
-        {"nome": "Prof. de Ed. Física", "materia": "Educação Física"}
+        {"nome": "Brendon", "materia": "Língua Portuguesa", "foto": "Brendon. Língua Portuguesa.jpg"},
+        {"nome": "Leo", "materia": "Matemática", "foto": "Leo Matemática.jpg"},
+        {"nome": "William", "materia": "História", "foto": "William história.jpg"},
+        {"nome": "José Pedro", "materia": "Geografia", "foto": "José Pedro geografia.jpg"},
+        {"nome": "Ana Desirée", "materia": "Inglês", "foto": "Ana Desirée inglês.jpg"},
+        {"nome": "Luci", "materia": "Ensino Religioso e Arte", "foto": "Luci Ensino Religioso e Arte.jpg"},
+        {"nome": "Maika", "materia": "Filosofia", "foto": "Maika filosofia.jpg"},
+        {"nome": "Evandro", "materia": "Educação Física", "foto": "Evandro educação física.jpg"}
     ]
 
-    # Organização em colunas para os professores (4 por linha)
+    # Organização em colunas (4 por linha)
     cols = st.columns(4)
     for i, prof in enumerate(professores):
         with cols[i % 4]:
+            # Criando a URL final codificada para evitar erros com espaços no nome do arquivo
+            foto_url = base_url + prof['foto'].replace(" ", "%20")
             st.markdown(f'''<div class="img-container">
-                <img src="https://via.placeholder.com/150/004A99/FFFFFF?text=Professor" class="img-circular">
+                <img src="{foto_url}" class="img-circular" onerror="this.src='https://via.placeholder.com/150/004A99/FFFFFF?text=Foto'">
                 <div class="nome-equipe">{prof['nome']}</div>
                 <div class="cargo-equipe">{prof['materia']}</div>
             </div>''', unsafe_allow_html=True)
