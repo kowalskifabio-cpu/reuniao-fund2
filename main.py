@@ -1,14 +1,14 @@
 import streamlit as st
 import urllib.parse
 
-# Configuração da página - Sem reduções
+# Configuração da página - Visual Imersivo e Completo
 st.set_page_config(
     page_title="Reunião Pedagógica 2026 - Escola Ursula Benincasa",
     page_icon="🏫",
     layout="wide"
 )
 
-# Estilização CSS para fotos circulares
+# Estilização CSS para fotos circulares e design limpo
 st.markdown("""
     <style>
     .stApp { background-color: #F0F7FF; }
@@ -27,6 +27,7 @@ st.markdown("""
         width: 150px;
         height: 150px;
         margin-bottom: 10px;
+        box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
     }
 
     .nome-equipe { font-weight: bold; font-size: 1.1em; margin-bottom: 2px; color: #004A99; }
@@ -44,7 +45,7 @@ st.markdown("""
     </style>
     """, unsafe_allow_html=True)
 
-# URL base CORRETA para arquivos no GitHub (Link Raw)
+# URL base do repositório (RAW)
 base_url = "https://raw.githubusercontent.com/kowalskifabio-cpu/reuniao-pais-2026/main/"
 
 # Cabeçalho
@@ -57,7 +58,7 @@ with col_titulo:
 
 st.info("**Regra Máxima:** 'Sem outra regra além do amor' — Madre Úrsula Benincasa")
 
-# Abas - Conteúdo 100% integral
+# Abas com 100% de Fidelidade ao Documento Original
 tab1, tab2, tab3, tab4, tab5, tab6, tab7 = st.tabs([
     "🏠 Institucional", "👥 Equipe", "📅 Avisos & Rotina", "⏰ Horários", "📊 Avaliação", "🚌 Projetos", "❓ Dúvidas"
 ])
@@ -67,44 +68,92 @@ with tab1:
     st.write("### 🌍 Mantenedora e Congregação")
     st.write("- **Associação das Irmãs Teatinas da Imaculada Conceição:** Fundada em 21/07/1973.")
     st.write("- **Congregação:** Fundada em Nápoles, Itália, pela Madre Ursula Benincasa em 1583.")
+    
     st.write("### 💡 Proposta Pedagógica")
     st.write("Fundamentada no desenvolvimento dos valores humanos: **Solidariedade, Respeito, Justiça e Diálogo**.")
-    st.write("### 🤝 Comunidade")
     st.write("Princípios seguidos por todos: Professores, Alunos, Funcionários, Diretores, Coordenadores e Pais/Responsáveis.")
 
 with tab2:
     st.header("Equipe Diretiva")
     c1, c2, c3 = st.columns(3)
+    
     with c1:
-        st.markdown(f'<div class="img-container"><img src="{base_url}logo.jpg" class="img-circular"><div class="nome-equipe">Irmã Olinda</div><div class="cargo-equipe">Diretora</div></div>', unsafe_allow_html=True)
+        st.markdown(f'''<div class="img-container">
+            <img src="{base_url}logo.jpg" class="img-circular">
+            <div class="nome-equipe">Irmã Olinda</div>
+            <div class="cargo-equipe">Diretora</div>
+        </div>''', unsafe_allow_html=True)
+
     with c2:
-        st.markdown(f'<div class="img-container"><img src="{base_url}Ingrit.jpg" class="img-circular"><div class="nome-equipe">Ingrit Candido</div><div class="cargo-equipe">Coordenadora Fundamental 2 e<br>Integral Manhã</div></div>', unsafe_allow_html=True)
+        st.markdown(f'''<div class="img-container">
+            <img src="{base_url}Ingrit.jpg" class="img-circular">
+            <div class="nome-equipe">Ingrit Candido</div>
+            <div class="cargo-equipe">Coordenadora Fundamental 2 e<br>Integral Manhã</div>
+        </div>''', unsafe_allow_html=True)
+
     with c3:
-        st.markdown(f'<div class="img-container"><img src="{base_url}Josi.jpg" class="img-circular"><div class="nome-equipe">Josiane Dellaqua</div><div class="cargo-equipe">Coordenadora Ed. Infantil, <br>Fundamental 1 e Integral Tarde</div></div>', unsafe_allow_html=True)
+        st.markdown(f'''<div class="img-container">
+            <img src="{base_url}Josi.jpg" class="img-circular">
+            <div class="nome-equipe">Josiane Dellaqua</div>
+            <div class="cargo-equipe">Coordenadora Ed. Infantil, <br>Fundamental 1 e Integral Tarde</div>
+        </div>''', unsafe_allow_html=True)
 
     st.markdown("<hr>", unsafe_allow_html=True)
     st.header("Corpo Docente - Ensino Fundamental 2")
     
-    # Configuração Individual de Carga (Garante que a foto apareça)
-    row1_c1, row1_c2, row1_c3, row1_c4 = st.columns(4)
-    with row1_c1:
-        st.markdown(f'<div class="img-container"><img src="{base_url}AnaDesirée.jpeg" class="img-circular"><div class="nome-equipe">Ana Desirée</div><div class="cargo-equipe">Inglês</div></div>', unsafe_allow_html=True)
-    with row1_c2:
-        st.markdown(f'<div class="img-container"><img src="{base_url}Brendon.jpeg" class="img-circular"><div class="nome-equipe">Brendon</div><div class="cargo-equipe">Língua Portuguesa</div></div>', unsafe_allow_html=True)
-    with row1_c3:
-        st.markdown(f'<div class="img-container"><img src="{base_url}Evandro.jpeg" class="img-circular"><div class="nome-equipe">Evandro</div><div class="cargo-equipe">Educação Física</div></div>', unsafe_allow_html=True)
-    with row1_c4:
-        st.markdown(f'<div class="img-container"><img src="{base_url}JoséPedro.jpeg" class="img-circular"><div class="nome-equipe">José Pedro</div><div class="cargo-equipe">Geografia</div></div>', unsafe_allow_html=True)
+    # Primeira Linha de Professores - Nomes de arquivos simplificados (conforme imagem_3d86a2.png)
+    cp1, cp2, cp3, cp4 = st.columns(4)
+    with cp1:
+        st.markdown(f'''<div class="img-container">
+            <img src="{base_url}AnaDesir%C3%A9e.jpeg" class="img-circular">
+            <div class="nome-equipe">Ana Desirée</div>
+            <div class="cargo-equipe">Inglês</div>
+        </div>''', unsafe_allow_html=True)
+    with cp2:
+        st.markdown(f'''<div class="img-container">
+            <img src="{base_url}Brendon.jpeg" class="img-circular">
+            <div class="nome-equipe">Brendon</div>
+            <div class="cargo-equipe">Língua Portuguesa</div>
+        </div>''', unsafe_allow_html=True)
+    with cp3:
+        st.markdown(f'''<div class="img-container">
+            <img src="{base_url}Evandro.jpeg" class="img-circular">
+            <div class="nome-equipe">Evandro</div>
+            <div class="cargo-equipe">Educação Física</div>
+        </div>''', unsafe_allow_html=True)
+    with cp4:
+        st.markdown(f'''<div class="img-container">
+            <img src="{base_url}Jos%C3%A9Pedro.jpeg" class="img-circular">
+            <div class="nome-equipe">José Pedro</div>
+            <div class="cargo-equipe">Geografia</div>
+        </div>''', unsafe_allow_html=True)
 
-    row2_c1, row2_c2, row2_c3, row2_c4 = st.columns(4)
-    with row2_c1:
-        st.markdown(f'<div class="img-container"><img src="{base_url}Leo.jpeg" class="img-circular"><div class="nome-equipe">Leo</div><div class="cargo-equipe">Matemática</div></div>', unsafe_allow_html=True)
-    with row2_c2:
-        st.markdown(f'<div class="img-container"><img src="{base_url}Luci.jpeg" class="img-circular"><div class="nome-equipe">Luci</div><div class="cargo-equipe">Ensino Religioso e Arte</div></div>', unsafe_allow_html=True)
-    with row2_c3:
-        st.markdown(f'<div class="img-container"><img src="{base_url}Maika.jpeg" class="img-circular"><div class="nome-equipe">Maika</div><div class="cargo-equipe">Filosofia</div></div>', unsafe_allow_html=True)
-    with row2_c4:
-        st.markdown(f'<div class="img-container"><img src="{base_url}William.jpeg" class="img-circular"><div class="nome-equipe">William</div><div class="cargo-equipe">História</div></div>', unsafe_allow_html=True)
+    # Segunda Linha de Professores - Nomes de arquivos simplificados
+    cp5, cp6, cp7, cp8 = st.columns(4)
+    with cp5:
+        st.markdown(f'''<div class="img-container">
+            <img src="{base_url}Leo.jpeg" class="img-circular">
+            <div class="nome-equipe">Leo</div>
+            <div class="cargo-equipe">Matemática</div>
+        </div>''', unsafe_allow_html=True)
+    with cp6:
+        st.markdown(f'''<div class="img-container">
+            <img src="{base_url}Luci.jpeg" class="img-circular">
+            <div class="nome-equipe">Luci</div>
+            <div class="cargo-equipe">Ensino Religioso e Arte</div>
+        </div>''', unsafe_allow_html=True)
+    with cp7:
+        st.markdown(f'''<div class="img-container">
+            <img src="{base_url}Maika.jpeg" class="img-circular">
+            <div class="nome-equipe">Maika</div>
+            <div class="cargo-equipe">Filosofia</div>
+        </div>''', unsafe_allow_html=True)
+    with cp8:
+        st.markdown(f'''<div class="img-container">
+            <img src="{base_url}William.jpeg" class="img-circular">
+            <div class="nome-equipe">William</div>
+            <div class="cargo-equipe">História</div>
+        </div>''', unsafe_allow_html=True)
 
 with tab3:
     st.header("Orientações Educacionais e Avisos")
@@ -165,14 +214,15 @@ with tab6:
     st.write("- **Obrigatória autorização prévia dos pais.**")
     st.write("---")
     st.write("### 🧠 Sala de Recursos (Neurodivergentes)")
-    st.write("Previsão de inauguração: **Julho de 2026**.")
+    st.write("Previsão de inauguração: **Julho**.")
 
 with tab7:
     st.header("Canal de Comunicação Direta")
+    st.write("Caso sua dúvida não tenha sido abordada no tempo da reunião, utilize nosso canal oficial abaixo:")
     st.markdown(f"""
     <div class="qr-container">
-        <h3>Acesse nosso Formulário de Dúvidas</h3>
-        <p>Utilize o QR Code abaixo para registrar dúvidas ou sugestões para retorno posterior da escola.</p>
+        <h3>Acesse nosso Formulário de Dúvidas e Sugestões</h3>
+        <p>Aponte a câmera do seu celular para o QR Code abaixo ou clique no botão.</p>
         <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://reuniao-pais-2026.streamlit.app" width="200">
     </div>
     """, unsafe_allow_html=True)
