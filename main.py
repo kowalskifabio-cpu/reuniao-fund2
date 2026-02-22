@@ -16,34 +16,36 @@ st.markdown("""
     .img-container {
         text-align: center;
         padding: 10px;
-        margin-top: -10px;
+        margin-bottom: 20px;
     }
     
     .img-circular {
         border-radius: 50%;
         border: 4px solid #004A99;
         object-fit: cover;
-        width: 180px;
-        height: 180px;
+        width: 150px;
+        height: 150px;
         margin-bottom: 10px;
     }
 
-    .nome-equipe { font-weight: bold; font-size: 1.2em; margin-bottom: 2px; }
-    .cargo-equipe { font-size: 0.9em; color: #555; }
+    .nome-equipe { font-weight: bold; font-size: 1.1em; margin-bottom: 2px; color: #004A99; }
+    .cargo-equipe { font-size: 0.85em; color: #555; line-height: 1.2; }
+    
+    hr { margin: 2em 0; border: 0; border-top: 1px solid #ddd; }
     </style>
     """, unsafe_allow_html=True)
 
 # Cabeçalho
 col_logo, col_titulo = st.columns([1, 4])
 with col_logo:
-    st.image("logo.jpg", width=140)
+    st.image("https://raw.githubusercontent.com/kowalskifabio-cpu/reuniao-pais-2026/main/logo.jpg", width=140)
 with col_titulo:
     st.title("Reunião Pedagógica 2026")
     st.subheader("Escola Ursula Benincasa — Irmãs Teatinas")
 
 st.info("**Regra Máxima:** 'Sem outra regra além do amor' — Madre Úrsula Benincasa")
 
-# Abas com 100% do conteúdo dos slides
+# Abas
 tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs([
     "🏠 Institucional", "👥 Equipe", "📅 Avisos & Rotina", "⏰ Horários", "📊 Avaliação", "🚌 Projetos"
 ])
@@ -59,7 +61,7 @@ with tab1:
     st.write("Princípios seguidos por todos: Professores, Alunos, Funcionários, Diretores, Coordenadores e Pais/Responsáveis.")
 
 with tab2:
-    st.header("Equipe Diretiva (Carômetro)")
+    st.header("Equipe Diretiva")
     c1, c2, c3 = st.columns(3)
     
     with c1:
@@ -73,15 +75,40 @@ with tab2:
         st.markdown(f'''<div class="img-container">
             <img src="https://raw.githubusercontent.com/kowalskifabio-cpu/reuniao-pais-2026/main/Ingrit.jpg" class="img-circular">
             <div class="nome-equipe">Ingrit Candido</div>
-            <div class="cargo-equipe">Coordenadora Fundamental 2 e Integral Manhã</div>
+            <div class="cargo-equipe">Coordenadora Fundamental 2 e<br>Integral Manhã</div>
         </div>''', unsafe_allow_html=True)
 
     with c3:
         st.markdown(f'''<div class="img-container">
             <img src="https://raw.githubusercontent.com/kowalskifabio-cpu/reuniao-pais-2026/main/Josi.jpg" class="img-circular">
             <div class="nome-equipe">Josiane Dellaqua</div>
-            <div class="cargo-equipe">Coordenadora Ed. Infantil, Fundamental 1 e Integral Tarde</div>
+            <div class="cargo-equipe">Coordenadora Ed. Infantil, <br>Fundamental 1 e Integral Tarde</div>
         </div>''', unsafe_allow_html=True)
+
+    st.markdown("<hr>", unsafe_allow_html=True)
+    st.header("Corpo Docente - Ensino Fundamental 2")
+    
+    # Lista de professores do Fund 2 (ajuste os nomes conforme sua lista final)
+    professores = [
+        {"nome": "Prof. de Português", "materia": "Língua Portuguesa"},
+        {"nome": "Prof. de Matemática", "materia": "Matemática"},
+        {"nome": "Prof. de História", "materia": "História"},
+        {"nome": "Prof. de Geografia", "materia": "Geografia"},
+        {"nome": "Prof. de Ciências", "materia": "Ciências"},
+        {"nome": "Prof. de Inglês", "materia": "Língua Inglesa"},
+        {"nome": "Prof. de Arte", "materia": "Arte"},
+        {"nome": "Prof. de Ed. Física", "materia": "Educação Física"}
+    ]
+
+    # Organização em colunas para os professores (4 por linha)
+    cols = st.columns(4)
+    for i, prof in enumerate(professores):
+        with cols[i % 4]:
+            st.markdown(f'''<div class="img-container">
+                <img src="https://via.placeholder.com/150/004A99/FFFFFF?text=Professor" class="img-circular">
+                <div class="nome-equipe">{prof['nome']}</div>
+                <div class="cargo-equipe">{prof['materia']}</div>
+            </div>''', unsafe_allow_html=True)
 
 with tab3:
     st.header("Orientações Educacionais e Avisos")
