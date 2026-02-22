@@ -1,4 +1,5 @@
 import streamlit as st
+import urllib.parse
 
 # Configuração da página
 st.set_page_config(
@@ -35,7 +36,7 @@ st.markdown("""
     </style>
     """, unsafe_allow_html=True)
 
-# URL base do seu repositório para as imagens
+# URL base do seu repositório
 base_url = "https://raw.githubusercontent.com/kowalskifabio-cpu/reuniao-pais-2026/main/"
 
 # Cabeçalho
@@ -48,7 +49,7 @@ with col_titulo:
 
 st.info("**Regra Máxima:** 'Sem outra regra além do amor' — Madre Úrsula Benincasa")
 
-# Abas
+# Abas com 100% do conteúdo original
 tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs([
     "🏠 Institucional", "👥 Equipe", "📅 Avisos & Rotina", "⏰ Horários", "📊 Avaliação", "🚌 Projetos"
 ])
@@ -91,24 +92,21 @@ with tab2:
     st.markdown("<hr>", unsafe_allow_html=True)
     st.header("Corpo Docente - Ensino Fundamental 2")
     
-    # Lista atualizada com os dados das imagens enviadas
     professores = [
-        {"nome": "Brendon", "materia": "Língua Portuguesa", "foto": "Brendon. Língua Portuguesa.jpeg"},
-        {"nome": "Leo", "materia": "Matemática", "foto": "Leo Matemática.jpeg"},
-        {"nome": "William", "materia": "História", "foto": "William história.jpeg"},
-        {"nome": "José Pedro", "materia": "Geografia", "foto": "José Pedro geografia.jpeg"},
         {"nome": "Ana Desirée", "materia": "Inglês", "foto": "Ana Desirée inglês.jpeg"},
+        {"nome": "Brendon", "materia": "Língua Portuguesa", "foto": "Brendon. Língua Portuguesa.jpeg"},
+        {"nome": "Evandro", "materia": "Educação Física", "foto": "Evandro educação física.jpeg"},
+        {"nome": "José Pedro", "materia": "Geografia", "foto": "José Pedro geografia.jpeg"},
+        {"nome": "Leo", "materia": "Matemática", "foto": "Leo Matemática.jpeg"},
         {"nome": "Luci", "materia": "Ensino Religioso e Arte", "foto": "Luci Ensino Religioso e Arte.jpeg"},
         {"nome": "Maika", "materia": "Filosofia", "foto": "Maika filosofia.jpeg"},
-        {"nome": "Evandro", "materia": "Educação Física", "foto": "Evandro educação física.jpeg"}
+        {"nome": "William", "materia": "História", "foto": "William história.jpeg"}
     ]
 
-    # Organização em colunas (4 por linha)
     cols = st.columns(4)
     for i, prof in enumerate(professores):
         with cols[i % 4]:
-            # Criando a URL final codificada para evitar erros com espaços no nome do arquivo
-            foto_url = base_url + prof['foto'].replace(" ", "%20")
+            foto_url = base_url + urllib.parse.quote(prof['foto'])
             st.markdown(f'''<div class="img-container">
                 <img src="{foto_url}" class="img-circular" onerror="this.src='https://via.placeholder.com/150/004A99/FFFFFF?text=Foto'">
                 <div class="nome-equipe">{prof['nome']}</div>
@@ -124,8 +122,8 @@ with tab3:
         
         st.write("### 📚 Biblioteca e Literatura (Infantil e Fund 1)")
         st.write("- Dia fixo na semana para empréstimo; devolução quinzenal.")
-        st.write("- **Atrasos:** Infantil e Fund I (multa por semana); Fund II (R$ 4,00 por dia).")
         st.write("- Aulas de Literatura acontecem quinzenalmente na biblioteca.")
+        st.write("- **Multas por atraso:** Infantil e Fund I (multa por semana); Fund II (R$ 4,00 por dia).")
         
         st.write("### 👩‍🏫 Atendimentos Individualizados")
         st.write("- Duração média de 20 minutos, organizados a partir de março.")
@@ -142,7 +140,7 @@ with tab3:
         st.write("Objetivo: incentivar o compartilhar e a convivência coletiva.")
         
         st.write("### 🍎 Lanche e Aniversários")
-        st.write("- Lanche: 15 minutos; orientamos opções saudáveis.")
+        st.write("- Tempo de lanche: 15 minutos; orientamos opções saudáveis.")
         st.write("- Aniversários: Kits individuais com agendamento via agenda e Secretaria.")
         
         st.write("### 📝 Lição de Casa e Cadastro")
