@@ -1,6 +1,6 @@
 import streamlit as st
 
-# Configuração da página - 100% de aproveitamento de tela
+# Configuração da página - Mantendo 100% da estrutura original
 st.set_page_config(
     page_title="Reunião Pedagógica 2026 - Escola Ursula Benincasa",
     page_icon="🏫",
@@ -12,7 +12,7 @@ st.markdown("""
     <style>
     .stApp { background-color: #F0F7FF; }
     h1, h2, h3 { color: #004A99; font-family: 'Helvetica', sans-serif; margin-top: 0px; }
-    hr { margin: 1em 0; border: 0; border-top: 1px solid #ddd; }
+    hr { margin: 2em 0; border: 0; border-top: 1px solid #ddd; }
     .qr-container {
         text-align: center;
         background: white;
@@ -46,7 +46,6 @@ with tab1:
     st.write("### 🌍 Mantenedora e Congregação")
     st.write("- **Associação das Irmãs Teatinas da Imaculada Conceição:** Fundada em 21/07/1973.")
     st.write("- **Congregação:** Fundada em Nápoles (Itália) em 1583 pela Madre Ursula Benincasa.")
-    
     st.write("### 💡 Proposta Pedagógica")
     st.write("Fundamentada no desenvolvimento dos valores humanos: **Solidariedade, Respeito, Justiça e Diálogo**.")
     st.write("Princípios seguidos por todos: Professores, Alunos, Funcionários, Diretores, Coordenadores e Pais/Responsáveis.")
@@ -64,7 +63,7 @@ with tab2:
     st.markdown("<hr>", unsafe_allow_html=True)
     st.header("Corpo Docente - Ensino Fundamental 2")
     
-    # Linha 1 de Professores usando st.image nativo (mais seguro para carregar)
+    # Linha 1 de Professores (Carga individualizada e nomes de arquivos limpos)
     cp1, cp2, cp3, cp4 = st.columns(4)
     with cp1:
         st.image(f"{base_url}ana.jpeg", width=150)
@@ -79,7 +78,7 @@ with tab2:
         st.write("**Evandro**")
         st.caption("Educação Física")
     with cp4:
-        st.image(f"{base_url}josepedro.jpeg", width=150)
+        st.image(f"{base_url}jose.jpeg", width=150)
         st.write("**José Pedro**")
         st.caption("Geografia")
 
