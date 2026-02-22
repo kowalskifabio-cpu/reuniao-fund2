@@ -7,30 +7,12 @@ st.set_page_config(
     layout="wide"
 )
 
-# Estilização CSS para molduras redondas perfeitas e padronização
+# Estilização CSS para identidade visual
 st.markdown("""
     <style>
     .stApp { background-color: #F0F7FF; }
     h1, h2, h3 { color: #004A99; font-family: 'Helvetica', sans-serif; margin-top: 0px; }
     hr { margin: 1em 0; border: 0; border-top: 1px solid #ddd; }
-    
-    /* Moldura Redonda Padronizada */
-    .img-circular {
-        width: 150px;
-        height: 150px;
-        border-radius: 50%;
-        object-fit: cover;
-        border: 4px solid #004A99;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    
-    .container-equipe {
-        text-align: center;
-        margin-bottom: 20px;
-    }
-
     .qr-container {
         text-align: center;
         background: white;
@@ -44,6 +26,7 @@ st.markdown("""
 # Título e Logo Superior
 col_logo, col_titulo = st.columns([1, 4])
 with col_logo:
+    # Usando o arquivo local diretamente (como validado por você)
     st.image("logo.jpg", width=140)
 with col_titulo:
     st.title("Reunião Pedagógica 2026")
@@ -51,7 +34,7 @@ with col_titulo:
 
 st.info("**Regra Máxima:** 'Sem outra regra além do amor' — Madre Úrsula Benincasa")
 
-# Abas com 100% do conteúdo original
+# Abas com 100% do conteúdo original (Sem resumos)
 tab1, tab2, tab3, tab4, tab5, tab6, tab7 = st.tabs([
     "🏠 Institucional", "👥 Equipe", "📅 Avisos & Rotina", "⏰ Horários", "📊 Avaliação", "🚌 Projetos", "❓ Dúvidas"
 ])
@@ -67,39 +50,54 @@ with tab1:
 
 with tab2:
     st.header("Equipe Diretiva")
-    # Para as coordenadoras também usaremos a moldura redonda
     c1, c2, c3 = st.columns(3)
     with c1:
-        st.markdown('<div class="container-equipe"><img src="https://raw.githubusercontent.com/kowalskifabio-cpu/reuniao-pais-2026/main/logo.jpg" class="img-circular"><br><b>Irmã Olinda</b><br><small>Diretora</small></div>', unsafe_allow_html=True)
+        st.image("logo.jpg", width=180, caption="Irmã Olinda - Diretora")
     with c2:
-        st.markdown('<div class="container-equipe"><img src="https://raw.githubusercontent.com/kowalskifabio-cpu/reuniao-pais-2026/main/Ingrit.jpg" class="img-circular"><br><b>Ingrit Candido</b><br><small>Coord. Fund 2 e Integral</small></div>', unsafe_allow_html=True)
+        st.image("Ingrit.jpg", width=180, caption="Ingrit Candido - Coord. Fund 2 e Integral")
     with c3:
-        st.markdown('<div class="container-equipe"><img src="https://raw.githubusercontent.com/kowalskifabio-cpu/reuniao-pais-2026/main/Josi.jpg" class="img-circular"><br><b>Josiane Dellaqua</b><br><small>Coord. Infantil e Fund 1</small></div>', unsafe_allow_html=True)
+        st.image("Josi.jpg", width=180, caption="Josiane Dellaqua - Coord. Infantil e Fund 1")
 
     st.markdown("<hr>", unsafe_allow_html=True)
     st.header("Corpo Docente - Ensino Fundamental 2")
     
-    # Linha 1 de Professores com Moldura HTML
+    # Linha 1 de Professores (Carga direta do arquivo local)
     cp1, cp2, cp3, cp4 = st.columns(4)
     with cp1:
-        st.markdown('<div class="container-equipe"><img src="https://raw.githubusercontent.com/kowalskifabio-cpu/reuniao-pais-2026/main/ana.jpg" class="img-circular"><br><b>Ana Desirée</b><br><small>Inglês</small></div>', unsafe_allow_html=True)
+        st.image("ana.jpg", width=150)
+        st.write("**Ana Desirée**")
+        st.caption("Inglês")
     with cp2:
-        st.markdown('<div class="container-equipe"><img src="https://raw.githubusercontent.com/kowalskifabio-cpu/reuniao-pais-2026/main/brendon.jpg" class="img-circular"><br><b>Brendon</b><br><small>Língua Portuguesa</small></div>', unsafe_allow_html=True)
+        st.image("brendon.jpg", width=150)
+        st.write("**Brendon**")
+        st.caption("Língua Portuguesa")
     with cp3:
-        st.markdown('<div class="container-equipe"><img src="https://raw.githubusercontent.com/kowalskifabio-cpu/reuniao-pais-2026/main/evandro.jpg" class="img-circular"><br><b>Evandro</b><br><small>Educação Física</small></div>', unsafe_allow_html=True)
+        st.image("evandro.jpg", width=150)
+        st.write("**Evandro**")
+        st.caption("Educação Física")
     with cp4:
-        st.markdown('<div class="container-equipe"><img src="https://raw.githubusercontent.com/kowalskifabio-cpu/reuniao-pais-2026/main/jose.jpg" class="img-circular"><br><b>José Pedro</b><br><small>Geografia</small></div>', unsafe_allow_html=True)
+        st.image("jose.jpg", width=150)
+        st.write("**José Pedro**")
+        st.caption("Geografia")
 
     # Linha 2 de Professores
     cp5, cp6, cp7, cp8 = st.columns(4)
     with cp5:
-        st.markdown('<div class="container-equipe"><img src="https://raw.githubusercontent.com/kowalskifabio-cpu/reuniao-pais-2026/main/leo.jpg" class="img-circular"><br><b>Leo</b><br><small>Matemática</small></div>', unsafe_allow_html=True)
+        st.image("leo.jpg", width=150)
+        st.write("**Leo**")
+        st.caption("Matemática")
     with cp6:
-        st.markdown('<div class="container-equipe"><img src="https://raw.githubusercontent.com/kowalskifabio-cpu/reuniao-pais-2026/main/luci.jpg" class="img-circular"><br><b>Luci</b><br><small>Ensino Religioso e Arte</small></div>', unsafe_allow_html=True)
+        st.image("luci.jpg", width=150)
+        st.write("**Luci**")
+        st.caption("Ensino Religioso e Arte")
     with cp7:
-        st.markdown('<div class="container-equipe"><img src="https://raw.githubusercontent.com/kowalskifabio-cpu/reuniao-pais-2026/main/maika.jpg" class="img-circular"><br><b>Maika</b><br><small>Filosofia</small></div>', unsafe_allow_html=True)
+        st.image("maika.jpg", width=150)
+        st.write("**Maika**")
+        st.caption("Filosofia")
     with cp8:
-        st.markdown('<div class="container-equipe"><img src="https://raw.githubusercontent.com/kowalskifabio-cpu/reuniao-pais-2026/main/william.jpg" class="img-circular"><br><b>William</b><br><small>História</small></div>', unsafe_allow_html=True)
+        st.image("william.jpg", width=150)
+        st.write("**William**")
+        st.caption("História")
 
 with tab3:
     st.header("Orientações Educacionais e Avisos")
