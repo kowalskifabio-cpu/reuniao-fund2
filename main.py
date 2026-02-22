@@ -99,56 +99,56 @@ with tab2:
     st.markdown("<hr>", unsafe_allow_html=True)
     st.header("Corpo Docente - Ensino Fundamental 2")
     
-    # Primeira Linha de Professores
+    # Primeira Linha de Professores - Nomes de arquivos simplificados
     cp1, cp2, cp3, cp4 = st.columns(4)
     with cp1:
         st.markdown(f'''<div class="img-container">
-            <img src="{base_url}Ana%20Desir%C3%A9e%20ingl%C3%AAs.jpeg" class="img-circular">
+            <img src="{base_url}AnaDesirée.jpeg" class="img-circular">
             <div class="nome-equipe">Ana Desirée</div>
             <div class="cargo-equipe">Inglês</div>
         </div>''', unsafe_allow_html=True)
     with cp2:
         st.markdown(f'''<div class="img-container">
-            <img src="{base_url}Brendon.%20L%C3%ADngua%20Portuguesa.jpeg" class="img-circular">
+            <img src="{base_url}Brendon.jpeg" class="img-circular">
             <div class="nome-equipe">Brendon</div>
             <div class="cargo-equipe">Língua Portuguesa</div>
         </div>''', unsafe_allow_html=True)
     with cp3:
         st.markdown(f'''<div class="img-container">
-            <img src="{base_url}Evandro%20educa%C3%A7%C3%A3o%20f%C3%ADsica.jpeg" class="img-circular">
+            <img src="{base_url}Evandro.jpeg" class="img-circular">
             <div class="nome-equipe">Evandro</div>
             <div class="cargo-equipe">Educação Física</div>
         </div>''', unsafe_allow_html=True)
     with cp4:
         st.markdown(f'''<div class="img-container">
-            <img src="{base_url}Jos%C3%A9%20Pedro%20geografia.jpeg" class="img-circular">
+            <img src="{base_url}JoséPedro.jpeg" class="img-circular">
             <div class="nome-equipe">José Pedro</div>
             <div class="cargo-equipe">Geografia</div>
         </div>''', unsafe_allow_html=True)
 
-    # Segunda Linha de Professores
+    # Segunda Linha de Professores - Nomes de arquivos simplificados
     cp5, cp6, cp7, cp8 = st.columns(4)
     with cp5:
         st.markdown(f'''<div class="img-container">
-            <img src="{base_url}Leo%20Matem%C3%A1tica.jpeg" class="img-circular">
+            <img src="{base_url}Leo.jpeg" class="img-circular">
             <div class="nome-equipe">Leo</div>
             <div class="cargo-equipe">Matemática</div>
         </div>''', unsafe_allow_html=True)
     with cp6:
         st.markdown(f'''<div class="img-container">
-            <img src="{base_url}Luci%20Ensino%20Religioso%20e%20Arte.jpeg" class="img-circular">
+            <img src="{base_url}Luci.jpeg" class="img-circular">
             <div class="nome-equipe">Luci</div>
             <div class="cargo-equipe">Ensino Religioso e Arte</div>
         </div>''', unsafe_allow_html=True)
     with cp7:
         st.markdown(f'''<div class="img-container">
-            <img src="{base_url}Maika%20filosofia.jpeg" class="img-circular">
+            <img src="{base_url}Maika.jpeg" class="img-circular">
             <div class="nome-equipe">Maika</div>
             <div class="cargo-equipe">Filosofia</div>
         </div>''', unsafe_allow_html=True)
     with cp8:
         st.markdown(f'''<div class="img-container">
-            <img src="{base_url}William%20hist%C3%B3ria.jpeg" class="img-circular">
+            <img src="{base_url}William.jpeg" class="img-circular">
             <div class="nome-equipe">William</div>
             <div class="cargo-equipe">História</div>
         </div>''', unsafe_allow_html=True)
