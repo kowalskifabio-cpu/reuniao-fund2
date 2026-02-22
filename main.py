@@ -26,7 +26,7 @@ st.markdown("""
 # Título e Logo Superior
 col_logo, col_titulo = st.columns([1, 4])
 with col_logo:
-    # Usando o arquivo local diretamente
+    # Usando o arquivo local diretamente (como validado por você)
     st.image("logo.jpg", width=140)
 with col_titulo:
     st.title("Reunião Pedagógica 2026")
@@ -34,7 +34,7 @@ with col_titulo:
 
 st.info("**Regra Máxima:** 'Sem outra regra além do amor' — Madre Úrsula Benincasa")
 
-# Abas com 100% do conteúdo original
+# Abas com 100% do conteúdo original (Sem resumos)
 tab1, tab2, tab3, tab4, tab5, tab6, tab7 = st.tabs([
     "🏠 Institucional", "👥 Equipe", "📅 Avisos & Rotina", "⏰ Horários", "📊 Avaliação", "🚌 Projetos", "❓ Dúvidas"
 ])
@@ -104,22 +104,27 @@ with tab3:
     col_a, col_b = st.columns(2)
     with col_a:
         st.write("### 👕 Uniforme")
-        st.write("Uso obrigatório e com nome em todas as peças. Não serão permitidas outras cores.")
+        st.write("Estar devidamente uniformizado e colocar nome em todas as peças. Não serão permitidas outras cores.")
         st.write("### 📚 Biblioteca e Literatura")
         st.write("- Dia fixo na semana para empréstimo; devolução quinzenal.")
         st.write("- **Multas por atraso:** Infantil e Fund I (por semana); Fund II (R$ 4,00 por dia).")
+        st.write("- Aulas de Literatura acontecem quinzenalmente na biblioteca.")
         st.write("### 👩‍🏫 Atendimentos Individualizados")
         st.write("- Duração média de 20 minutos, organizados a partir de março.")
-        st.write("- Agendar via agenda com antecedência de 24h a 48h.")
+        st.write("- **Infantil/Fund I:** Agendar via agenda conforme horários da escola.")
+        st.write("- **Fund II:** Solicitar na Secretaria conforme disponibilidade.")
 
     with col_b:
         st.write("### 💊 Medicação e Saúde")
-        st.write("Administração somente com receita médica e autorização assinada.")
+        st.write("Administração somente mediante receita médica e autorização assinada.")
         st.write("### 🧸 Dia do Brinquedo (Sexta-feira)")
         st.write("Educação Infantil e Fundamental I. Proibido eletrônicos ou bolas.")
         st.write("### 🍎 Lanche e Aniversários")
-        st.write("- Lanche: 15 minutos; orientamos opções saudáveis.")
-        st.write("- Aniversários: Kits individuais com agendamento via agenda.")
+        st.write("- Tempo de lanche: 15 minutos; orientamos o envio de lanche saudável.")
+        st.write("- Aniversários (Infantil/Fund I): Kits individuais com agendamento via agenda e Secretaria.")
+        st.write("### 📝 Avisos Finais")
+        st.write("- Acompanhar a lição de casa diariamente para incentivar a autonomia.")
+        st.write("- Alterações cadastrais devem ser comunicadas via agenda.")
 
 with tab4:
     st.header("Horários e Pontualidade")
@@ -129,13 +134,18 @@ with tab4:
     with col_h2:
         st.info("### 🌤️ Período Tarde\n**13h às 17h35** (Fund I)\n**13h às 17h15** (Ed. Infantil)")
     st.warning("⚠️ **Tolerância:** 10 minutos. Após isso, o aluno ingressa apenas na 2ª aula.")
+    st.write("Atrasos superiores exigem atestado médico ou justificativa dos responsáveis.")
 
 with tab5:
     st.header("Sistema de Avaliação e Controle")
     st.write("### 📊 Ensino Fundamental (1º ao 9º ano)")
     st.write("- **Média Bimestral:** 6.0")
     st.write("- **Aprovação Final:** Média Final (MF) ≥ 24.0")
-    st.latex(r'''\text{Média} = \frac{P1 + P2}{2}''')
+    st.latex(r'''\text{Média} = \frac{P1 (\text{Atividades Formativas}) + P2 (\text{Prova Bimestral})}{2}''')
+    st.write("- **P1 (10,0):** Trabalhos, pesquisas, testes e atividades formativas.")
+    st.write("- **P2 (10,0):** Prova bimestral.")
+    st.write("---")
+    st.write("### 💻 Sistema Notas Online (www.notasonline.com)")
     st.error("Registros incluem: desentendimento, desrespeito, dano material, atrasos e uniforme incompleto.")
 
 with tab6:
@@ -143,6 +153,7 @@ with tab6:
     st.write("### 🚌 Aula de Campo")
     st.write("Objetivo: experiências concretas em teatros, museus e parques.")
     st.write("- Acompanhamento total por professores e funcionários.")
+    st.write("- **Obrigatória autorização prévia dos pais**.")
     st.write("---")
     st.write("### 🧠 Sala de Recursos (Neurodivergentes)")
     st.write("Previsão de inauguração: **Julho**.")
@@ -156,3 +167,4 @@ with tab7:
         <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://reuniao-pais-2026.streamlit.app" width="200">
     </div>
     """, unsafe_allow_html=True)
+    st.link_button("Abrir Formulário no Navegador", "https://docs.google.com/forms/d/e/SeuFormularioAqui")
