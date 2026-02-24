@@ -7,12 +7,26 @@ st.set_page_config(
     layout="wide"
 )
 
-# Estilização CSS para identidade visual
+# Estilização CSS para identidade visual e Molduras Redondas Padronizadas
 st.markdown("""
     <style>
     .stApp { background-color: #F0F7FF; }
     h1, h2, h3 { color: #004A99; font-family: 'Helvetica', sans-serif; margin-top: 0px; }
     hr { margin: 1em 0; border: 0; border-top: 1px solid #ddd; }
+    
+    /* Estilo para fotos redondas e padronizadas */
+    .img-circular {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 3px solid #004A99;
+        margin-bottom: 10px;
+    }
+    .equipe-container {
+        text-align: center;
+    }
+
     .qr-container {
         text-align: center;
         background: white;
@@ -26,7 +40,6 @@ st.markdown("""
 # Título e Logo Superior
 col_logo, col_titulo = st.columns([1, 4])
 with col_logo:
-    # Usando o arquivo local diretamente (como validado por você)
     st.image("logo.jpg", width=140)
 with col_titulo:
     st.title("Reunião Pedagógica 2026")
@@ -61,7 +74,7 @@ with tab2:
     st.markdown("<hr>", unsafe_allow_html=True)
     st.header("Corpo Docente - Ensino Fundamental 2")
     
-    # Linha 1 de Professores (Carga direta do arquivo local)
+    # Linha 1 de Professores
     cp1, cp2, cp3, cp4 = st.columns(4)
     with cp1:
         st.image("ana.jpg", width=150)
@@ -80,7 +93,7 @@ with tab2:
         st.write("**José Pedro**")
         st.caption("Geografia")
 
-    # Linha 2 de Professores
+    # Linha 2 de Professores (Incluindo Edson e Fernanda)
     cp5, cp6, cp7, cp8 = st.columns(4)
     with cp5:
         st.image("leo.jpg", width=150)
@@ -98,6 +111,17 @@ with tab2:
         st.image("william.jpg", width=150)
         st.write("**William**")
         st.caption("História")
+
+    # Linha 3 de Professores (Novos Professores)
+    cp9, cp10, cp11, cp12 = st.columns(4)
+    with cp9:
+        st.image("Edson.jpg", width=150)
+        st.write("**Edson**")
+        st.caption("Ciências")
+    with cp10:
+        st.image("Fernanda.jpg", width=150)
+        st.write("**Fernanda**")
+        st.caption("Educação Digital e LIV")
 
 with tab3:
     st.header("Orientações Educacionais e Avisos")
@@ -167,4 +191,4 @@ with tab7:
         <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://reuniao-pais-2026.streamlit.app" width="200">
     </div>
     """, unsafe_allow_html=True)
-    st.link_button("Abrir Formulário no Navegador", "https://docs.google.com/forms/d/e/SeuFormularioAqui")
+    st.link_button("Abrir Formulário no Navegador", "https://docs.google.com/forms/d/e/1FAIpQLScT_SeuFormularioOriginalAqui")
