@@ -177,7 +177,8 @@ with tab4:
 
 with tab5:
     st.header("Horários e Pontualidade")
-    col_h1, col_h2 = st.columns(1)
+    # Ajustado para apenas uma coluna (Manhã)
+    col_h1 = st.columns(1)[0]
     with col_h1:
         st.info("### ☀️ Período Manhã\n**07h25 às 12h10**\nFundamental I e II")
     st.warning("⚠️ **Tolerância:** 10 minutos. Após isso, o aluno ingressa apenas na 2ª aula.")
