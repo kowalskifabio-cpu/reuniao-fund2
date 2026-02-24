@@ -156,10 +156,10 @@ with tab4:
     col_a, col_b = st.columns(2)
     with col_a:
         st.write("### 👕 Uniforme")
-        st.write("Estar devidamente uniformizado e colocar nome em todas as peças. Não serão permitidas outras cores.")
+        st.write("Estar devidamente uniformizado e colocar nome em todas as peças. Não serão permitidas outras cores. **Proibido o uso de chinelo e crocs.**")
         st.write("### 📚 Biblioteca e Literatura")
         st.write("- Dia fixo na semana para empréstimo; devolução quinzenal.")
-        st.write("- **Multas por atraso:** Infantil e Fund I (por semana); Fund II (R$ 4,00 por dia).")
+        st.write("- **Multas por atraso:** R$ 4,00 por dia para todos os segmentos.")
         st.write("- Aulas de Literatura acontecem quinzenalmente na biblioteca.")
         st.write("### 👩‍🏫 Atendimentos Individualizados")
         st.write("- Duração média de 20 minutos, organizados a partir de março.")
@@ -169,22 +169,17 @@ with tab4:
     with col_b:
         st.write("### 💊 Medicação e Saúde")
         st.write("Administração somente mediante receita médica e autorização assinada.")
-        st.write("### 🧸 Dia do Brinquedo (Sexta-feira)")
-        st.write("Educação Infantil e Fundamental I. Proibido eletrônicos ou bolas.")
-        st.write("### 🍎 Lanche e Aniversários")
+        st.write("### 🍎 Lanche")
         st.write("- Tempo de lanche: 15 minutos; orientamos o envio de lanche saudável.")
-        st.write("- Aniversários (Infantil/Fund I): Kits individuais com agendamento via agenda e Secretaria.")
         st.write("### 📝 Avisos Finais")
         st.write("- Acompanhar a lição de casa diariamente para incentivar a autonomia.")
         st.write("- Alterações cadastrais devem ser comunicadas via agenda.")
 
 with tab5:
     st.header("Horários e Pontualidade")
-    col_h1, col_h2 = st.columns(2)
+    col_h1, col_h2 = st.columns(1)
     with col_h1:
         st.info("### ☀️ Período Manhã\n**07h25 às 12h10**\nFundamental I e II")
-    with col_h2:
-        st.info("### 🌤️ Período Tarde\n**13h às 17h35** (Fund I)\n**13h às 17h15** (Ed. Infantil)")
     st.warning("⚠️ **Tolerância:** 10 minutos. Após isso, o aluno ingressa apenas na 2ª aula.")
     st.write("Atrasos superiores exigem atestado médico ou justificativa dos responsáveis.")
 
@@ -212,6 +207,12 @@ with tab7:
     st.write("Objetivo: experiências concretas em teatros, museus e parques.")
     st.write("- Acompanhamento total por professores e funcionários.")
     st.write("- **Obrigatória autorização prévia dos pais**.")
+    st.write("---")
+    st.write("### 🧪 Feira de Ciências")
+    st.write("Projeto voltado para a experimentação e investigação científica.")
+    st.write("---")
+    st.write("### 🎨 Literart")
+    st.write("Projeto integrador que une literatura e artes visuais.")
     st.write("---")
     st.write("### 🧠 Sala de Recursos (Neurodivergentes)")
     st.write("Previsão de inauguração: **Julho**.")
