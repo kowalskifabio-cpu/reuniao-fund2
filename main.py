@@ -7,7 +7,7 @@ st.set_page_config(
     layout="wide"
 )
 
-# Estilização CSS para identidade visual e Molduras Redondas Padronizadas
+# Estilização CSS para identidade visual e Correção de Impressão PDF
 st.markdown("""
     <style>
     .stApp { background-color: #F0F7FF; }
@@ -35,10 +35,35 @@ st.markdown("""
         border: 2px dashed #004A99;
     }
     
-    /* Ajuste para garantir que nada suma na impressão */
+    /* AJUSTE CRÍTICO PARA IMPRESSÃO PDF: Força a exibição de todo o conteúdo longo */
     @media print {
+        /* Remove abas e barra lateral na impressão */
         .stTabs { display: none !important; }
         .stSidebar { display: none !important; }
+        header { display: none !important; }
+        footer { display: none !important; }
+        
+        /* Expande o contêiner principal para não cortar */
+        .main .block-container {
+            max-width: 100% !important;
+            padding: 0 !important;
+            margin: 0 !important;
+        }
+        
+        /* Garante que o fundo e cores apareçam (se marcado no navegador) */
+        body {
+            background-color: white !important;
+            color: black !important;
+        }
+        
+        /* Evita quebra de imagens e títulos no meio da página */
+        h1, h2, h3, img {
+            page-break-inside: avoid;
+        }
+        
+        .print-mode-content {
+            display: block !important;
+        }
     }
     </style>
     """, unsafe_allow_html=True)
@@ -60,9 +85,9 @@ st.info("**Regra Máxima:** 'Sem outra regra além do amor' — Madre Úrsula Be
 # LÓGICA DE EXIBIÇÃO: SE FOR MODO IMPRESSÃO, EXIBE TUDO SEQUENCIAL. SE NÃO, EXIBE EM ABAS.
 
 if modo_impressao:
-    st.warning("⚠️ MODO DE IMPRESSÃO ATIVADO: Use Ctrl+P para salvar como PDF. O conteúdo abaixo segue a ordem das abas.")
+    st.warning("⚠️ MODO DE IMPRESSÃO ATIVADO: Use Ctrl+P para salvar como PDF. Verifique se 'Gráficos de segundo plano' está marcado nas opções de impressão.")
     
-    # --- CONTEÚDO SEQUENCIAL PARA PDF ---
+    # --- CONTEÚDO SEQUENCIAL INTEGRAL PARA PDF ---
     
     st.header("🏠 Institucional e Proposta")
     st.write("### 🌍 Mantenedora e Congregação")
@@ -78,17 +103,20 @@ if modo_impressao:
     with c1: st.image("logo.jpg", width=180, caption="Irmã Olinda - Diretora")
     with c2: st.image("Ingrit.jpg", width=180, caption="Ingrit Candido - Coord. Fund 2 e Integral")
     with c3: st.image("Josi.jpg", width=180, caption="Josiane Dellaqua - Coord. Infantil e Fund 1")
+    
     st.write("### Corpo Docente - Ensino Fundamental 2")
     cp1, cp2, cp3, cp4 = st.columns(4)
     with cp1: st.image("ana.jpg", width=150); st.write("**Ana Desirée** (Inglês)")
     with cp2: st.image("brendon.jpg", width=150); st.write("**Brendon** (Língua Portuguesa)")
     with cp3: st.image("evandro.jpg", width=150); st.write("**Evandro** (Educação Física)")
     with cp4: st.image("jose.jpg", width=150); st.write("**José Pedro** (Geografia)")
+    
     cp5, cp6, cp7, cp8 = st.columns(4)
     with cp5: st.image("leo.jpg", width=150); st.write("**Leo** (Matemática)")
     with cp6: st.image("luci.jpg", width=150); st.write("**Luci** (Ensino Religioso e Arte)")
     with cp7: st.image("maika.jpg", width=150); st.write("**Maika** (Filosofia)")
     with cp8: st.image("william.jpg", width=150); st.write("**William** (História)")
+    
     cp9, cp10 = st.columns([1, 3])
     with cp9: st.image("Edson.jpg", width=150); st.write("**Edson** (Ciências)")
     with cp10: st.image("Fernanda.jpg", width=150); st.write("**Fernanda** (Educação Digital e LIV)")
