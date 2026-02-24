@@ -21,13 +21,10 @@ st.markdown("""
         border-radius: 50%;
         object-fit: cover;
         border: 3px solid #004A99;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
+        margin-bottom: 10px;
     }
     .equipe-container {
         text-align: center;
-        margin-bottom: 20px;
     }
 
     .qr-container {
@@ -50,7 +47,7 @@ with col_titulo:
 
 st.info("**Regra Máxima:** 'Sem outra regra além do amor' — Madre Úrsula Benincasa")
 
-# Abas com 100% do conteúdo original e nova aba Integral
+# Abas com 100% do conteúdo original (Sem resumos)
 tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8 = st.tabs([
     "🏠 Institucional", "👥 Equipe", "☀️ Integral", "📅 Avisos & Rotina", "⏰ Horários", "📊 Avaliação", "🚌 Projetos", "❓ Dúvidas"
 ])
@@ -68,11 +65,11 @@ with tab2:
     st.header("Equipe Diretiva")
     c1, c2, c3 = st.columns(3)
     with c1:
-        st.markdown('<div class="equipe-container"><img src="logo.jpg" class="img-circular"><br><b>Irmã Olinda</b><br><small>Diretora</small></div>', unsafe_allow_html=True)
+        st.image("logo.jpg", width=180, caption="Irmã Olinda - Diretora")
     with c2:
-        st.markdown('<div class="equipe-container"><img src="Ingrit.jpg" class="img-circular"><br><b>Ingrit Candido</b><br><small>Coord. Fund 2 e Integral</small></div>', unsafe_allow_html=True)
+        st.image("Ingrit.jpg", width=180, caption="Ingrit Candido - Coord. Fund 2 e Integral")
     with c3:
-        st.markdown('<div class="equipe-container"><img src="Josi.jpg" class="img-circular"><br><b>Josiane Dellaqua</b><br><small>Coord. Infantil e Fund 1</small></div>', unsafe_allow_html=True)
+        st.image("Josi.jpg", width=180, caption="Josiane Dellaqua - Coord. Infantil e Fund 1")
 
     st.markdown("<hr>", unsafe_allow_html=True)
     st.header("Corpo Docente - Ensino Fundamental 2")
@@ -80,84 +77,79 @@ with tab2:
     # Linha 1 de Professores
     cp1, cp2, cp3, cp4 = st.columns(4)
     with cp1:
-        st.markdown('<div class="equipe-container"><img src="ana.jpg" class="img-circular"><br><b>Ana Desirée</b><br><small>Inglês</small></div>', unsafe_allow_html=True)
+        st.image("ana.jpg", width=150)
+        st.write("**Ana Desirée**")
+        st.caption("Inglês")
     with cp2:
-        st.markdown('<div class="equipe-container"><img src="brendon.jpg" class="img-circular"><br><b>Brendon</b><br><small>Língua Portuguesa</small></div>', unsafe_allow_html=True)
+        st.image("brendon.jpg", width=150)
+        st.write("**Brendon**")
+        st.caption("Língua Portuguesa")
     with cp3:
-        st.markdown('<div class="equipe-container"><img src="evandro.jpg" class="img-circular"><br><b>Evandro</b><br><small>Educação Física</small></div>', unsafe_allow_html=True)
+        st.image("evandro.jpg", width=150)
+        st.write("**Evandro**")
+        st.caption("Educação Física")
     with cp4:
-        st.markdown('<div class="equipe-container"><img src="jose.jpg" class="img-circular"><br><b>José Pedro</b><br><small>Geografia</small></div>', unsafe_allow_html=True)
+        st.image("jose.jpg", width=150)
+        st.write("**José Pedro**")
+        st.caption("Geografia")
 
-    # Linha 2 de Professores
+    # Linha 2 de Professores (Incluindo Edson e Fernanda)
     cp5, cp6, cp7, cp8 = st.columns(4)
     with cp5:
-        st.markdown('<div class="equipe-container"><img src="leo.jpg" class="img-circular"><br><b>Leo</b><br><small>Matemática</small></div>', unsafe_allow_html=True)
+        st.image("leo.jpg", width=150)
+        st.write("**Leo**")
+        st.caption("Matemática")
     with cp6:
-        st.markdown('<div class="equipe-container"><img src="luci.jpg" class="img-circular"><br><b>Luci</b><br><small>Ensino Religioso e Arte</small></div>', unsafe_allow_html=True)
+        st.image("luci.jpg", width=150)
+        st.write("**Luci**")
+        st.caption("Ensino Religioso e Arte")
     with cp7:
-        st.markdown('<div class="equipe-container"><img src="maika.jpg" class="img-circular"><br><b>Maika</b><br><small>Filosofia</small></div>', unsafe_allow_html=True)
+        st.image("maika.jpg", width=150)
+        st.write("**Maika**")
+        st.caption("Filosofia")
     with cp8:
-        st.markdown('<div class="equipe-container"><img src="william.jpg" class="img-circular"><br><b>William</b><br><small>História</small></div>', unsafe_allow_html=True)
+        st.image("william.jpg", width=150)
+        st.write("**William**")
+        st.caption("História")
 
     # Linha 3 de Professores (Novos Professores)
     cp9, cp10, cp11, cp12 = st.columns(4)
     with cp9:
-        st.markdown('<div class="equipe-container"><img src="Edson.jpg" class="img-circular"><br><b>Edson</b><br><small>Ciências</small></div>', unsafe_allow_html=True)
+        st.image("Edson.jpg", width=150)
+        st.write("**Edson**")
+        st.caption("Ciências")
     with cp10:
-        st.markdown('<div class="equipe-container"><img src="Fernanda.jpg" class="img-circular"><br><b>Fernanda</b><br><small>Educação Digital e LIV</small></div>', unsafe_allow_html=True)
+        st.image("Fernanda.jpg", width=150)
+        st.write("**Fernanda**")
+        st.caption("Educação Digital e LIV")
 
 with tab3:
-    st.header("Informativo do Integral - Manhã")
-    st.caption("Curitiba, 23 de fevereiro de 2026")
+    st.header("Informativo do Integral - manhã")
+    [cite_start]st.write("**Curitiba, 23 de fevereiro de 2026** [cite: 1, 2]")
+    [cite_start]st.write("Prezadas famílias e queridos alunos, [cite: 1, 3]")
+    [cite_start]st.write("Pensando sempre no aprendizado, no desenvolvimento integral e na qualidade de ensino, reformulamos as aulas do Integral para tornar a rotina ainda mais rica, dinâmica e significativa para nossos estudantes. [cite: 1, 4]")
+    [cite_start]st.write("A partir deste período, nossa grade de horários foi reorganizada, contemplando atividades diversificadas que estimulam o desenvolvimento cognitivo, social, emocional e criativo dos alunos. Convidamos todos a conferirem as novas grades de horário e as aulas disponíveis em cada ciclo. [cite: 1, 5]")
+    [cite_start]st.write("Confira as novidades do Integral: [cite: 1, 7]")
     
-    st.write("Prezadas famílias e queridos alunos,")
-    st.write("Pensando sempre no aprendizado, no desenvolvimento integral e na qualidade de ensino, reformulamos as aulas do Integral para tornar a rotina ainda mais rica, dinâmica e significativa para nossos estudantes. [cite: 4]")
-    st.write("A partir deste período, nossa grade de horários foi reorganizada, contemplando atividades diversificadas que estimulam o desenvolvimento cognitivo, social, emocional e criativo dos alunos. [cite: 5]")
-    st.write("Confira as novidades do Integral: [cite: 7]")
+    st.write("### 🧪 Atividades e Oficinas")
+    [cite_start]st.write("- **Experiência / Pequenos Cientistas**: No laboratório de Ciências, as crianças vivenciam experiências práticas e seguras, explorando fenômenos como misturas, reações simples, estados físicos da matéria, plantio e observação da natureza. De forma lúdica, aprendem a observar, levantar hipóteses e registrar descobertas, despertando a curiosidade científica desde cedo. [cite: 1, 8, 9]")
+    [cite_start]st.write("- **Produção Textual (4º e 5º ano)**: Espaço dedicado ao desenvolvimento da escrita criativa e formal, trabalhando diferentes gêneros textuais, ampliação de vocabulário, organização de ideias e aprimoramento da expressão escrita. [cite: 1, 10]")
+    [cite_start]st.write("- **Contação de Histórias**: Momento de imaginação e encantamento, estimulando a escuta atenta, a interpretação e o gosto pela leitura. [cite: 1, 11]")
+    [cite_start]st.write("- **Iniciação Teatral**: Atividades que desenvolvem expressão corporal, oralidade, criatividade, autoconfiança e trabalho em grupo por meio de jogos e práticas teatrais. [cite: 1, 12]")
+    [cite_start]st.write("- **Oficina Criativa**: Exploração artística com diferentes materiais e técnicas, incentivando a criatividade, coordenação motora e expressão individual. [cite: 1, 13]")
+    [cite_start]st.write("- **Xadrez**: Desenvolvimento da concentração, planejamento, paciência e tomada de decisões estratégicas. [cite: 1, 14]")
+    [cite_start]st.write("- **Projeto**: Momento destinado a pesquisas, desenvolvimento de trabalhos interdisciplinares e aprofundamento de conteúdos. [cite: 1, 15]")
+    [cite_start]st.write("- **Culinária (quinzenal)**: Atividade prática que trabalha medidas, organização, autonomia, alimentação saudável e cooperação, além de proporcionar experiências sensoriais. [cite: 1, 16]")
+    [cite_start]st.write("- **Musicalização**: Vivências com ritmo, canto, percepção sonora e expressão musical, contribuindo para o desenvolvimento cognitivo e sensível. [cite: 1, 17]")
+    [cite_start]st.write("- **Raciocínio Lógico e Estratégia (2º ao 5º ano)**: Desafios, jogos e situações-problema que estimulam o pensamento lógico, a resolução de problemas e a tomada de decisões. [cite: 1, 18]")
+    [cite_start]st.write("- **Horta**: Contato direto com a natureza, plantio, cuidados com a terra e aprendizagem sobre sustentabilidade e alimentação saudável. [cite: 1, 19]")
+    [cite_start]st.write("- **Esportes**: Atividades que promovem coordenação motora, trabalho em equipe, respeito às regras e hábitos saudáveis. [cite: 1, 20]")
     
-    col_int1, col_int2 = st.columns(2)
-    with col_int1:
-        st.markdown("🧪 **Experiência / Pequenos Cientistas**")
-        st.write("No laboratório de Ciências, as crianças vivenciam experiências práticas e seguras, explorando fenômenos como misturas, reações simples, estados físicos da matéria, plantio e observação da natureza. De forma lúdica, aprendem a observar, levantar hipóteses e registrar descobertas. [cite: 8, 9]")
-        
-        st.markdown("✍️ **Produção Textual (4º e 5º ano)**")
-        st.write("Espaço dedicado ao desenvolvimento da escrita criativa e formal, trabalhando diferentes gêneros textuais, ampliação de vocabulário, organização de ideias e aprimoramento da expressão escrita. [cite: 10]")
-        
-        st.markdown("📖 **Contação de Histórias**")
-        st.write("Momento de imaginação e encantamento, estimulando a escuta atenta, a interpretação e o gosto pela leitura. [cite: 11]")
-        
-        st.markdown("🎭 **Iniciação Teatral**")
-        st.write("Atividades que desenvolvem expressão corporal, oralidade, criatividade, autoconfiança e trabalho em grupo por meio de jogos e práticas teatrais. [cite: 12]")
-        
-        st.markdown("🎨 **Oficina Criativa**")
-        st.write("Exploração artística com diferentes materiais e técnicas, incentivando a criatividade, coordenação motora e expressão individual. [cite: 13]")
-        
-        st.markdown("♟️ **Xadrez**")
-        st.write("Desenvolvimento da concentração, planejamento, paciência e tomada de decisões estratégicas. [cite: 14]")
-
-    with col_int2:
-        st.markdown("🔍 **Projeto**")
-        st.write("Momento destinado a pesquisas, desenvolvimento de trabalhos interdisciplinares e aprofundamento de conteúdos. [cite: 15]")
-        
-        st.markdown("👨‍🍳 **Culinária (quinzenal)**")
-        st.write("Atividade prática que trabalha medidas, organização, autonomia, alimentação saudável e cooperação, além de proporcionar experiências sensoriais. [cite: 16]")
-        
-        st.markdown("🎶 **Musicalização**")
-        st.write("Vivências com ritmo, canto, percepção sonora e expressão musical, contribuindo para o desenvolvimento cognitivo e sensível. [cite: 17]")
-        
-        st.markdown("🧠 **Raciocínio Lógico e Estratégia (2º ao 5º ano)**")
-        st.write("Desafios, jogos e situações-problema que estimulam o pensamento lógico, a resolução de problemas e a tomada de decisões. [cite: 18]")
-        
-        st.markdown("🌱 **Horta**")
-        st.write("Contato direto com a natureza, plantio, cuidados com a terra e aprendizagem sobre sustentabilidade e alimentação saudável. [cite: 19]")
-        
-        st.markdown("⚽ **Esportes**")
-        st.write("Atividades que promovem coordenação motora, trabalho em equipe, respeito às regras e hábitos saudáveis. [cite: 20]")
-
     st.write("---")
-    st.write("Além das aulas, os alunos continuam contando com momentos de descontração, café, descanso e almoço, garantindo equilíbrio entre aprendizagem e bem-estar. [cite: 21]")
-    st.info("Estamos muito animados com essa nova organização e confiantes de que ela proporcionará experiências ainda mais significativas para nossos alunos. Contamos com a parceria de sempre! [cite: 22, 23]")
-    st.write("**Equipe do Integral** [cite: 24]")
+    [cite_start]st.write("Além das aulas, os alunos continuam contando com momentos de descontração, café, descanso e almoço, garantindo equilíbrio entre aprendizagem e bem-estar. [cite: 1, 21]")
+    [cite_start]st.write("Estamos muito animados com essa nova organização e confiantes de que ela proporcionará experiências ainda mais significativas para nossos alunos. [cite: 1, 22]")
+    [cite_start]st.write("Contamos com a parceria de sempre! [cite: 1, 23]")
+    [cite_start]st.write("**Com carinho, Equipe do Integral** [cite: 1, 24]")
 
 with tab4:
     st.header("Orientações Educacionais e Avisos")
@@ -227,4 +219,4 @@ with tab8:
         <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://reuniao-pais-2026.streamlit.app" width="200">
     </div>
     """, unsafe_allow_html=True)
-    st.link_button("Abrir Formulário no Navegador", "https://docs.google.com/forms/d/e/SeuFormularioOriginalAqui")
+    st.link_button("Abrir Formulário no Navegador", "https://docs.google.com/forms/d/e/1FAIpQLScT_SeuFormularioOriginalAqui")
