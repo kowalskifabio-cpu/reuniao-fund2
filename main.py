@@ -212,7 +212,7 @@ with tab7:
     st.write("### 🧪 Feira de Ciências")
     st.write("Projeto voltado para a experimentação e investigação científica.")
     st.write("---")
-    st.write("### 🎨 Literarte")
+    st.write("### 🎨 Literart")
     st.write("Projeto integrador que une literatura e artes visuais.")
     st.write("---")
     st.write("### 🧠 Sala de Recursos (Neurodivergentes)")
@@ -228,32 +228,3 @@ with tab8:
     </div>
     """, unsafe_allow_html=True)
     st.link_button("Abrir Formulário no Navegador", "https://docs.google.com/forms/d/e/SeuFormularioOriginalAqui")
-from fpdf import FPDF
-
-def gerar_pdf():
-    pdf = FPDF()
-    pdf.set_auto_page_break(auto=True, margin=15)
-    pdf.add_page()
-    
-    # Título
-    pdf.set_font("Arial", 'B', 16)
-    pdf.cell(200, 10, "Reuniao Pedagogica 2026 - Escola Ursula Benincasa", ln=True, align='C')
-    pdf.ln(10)
-    
-    # Conteúdo Integral (Exemplo de estrutura)
-    pdf.set_font("Arial", 'B', 12)
-    pdf.cell(200, 10, "1. Proposta Pedagogica", ln=True)
-    pdf.set_font("Arial", '', 10)
-    pdf.multi_cell(0, 5, "Fundamentada no desenvolvimento dos valores humanos: Solidariedade, Respeito, Justica e Dialogo.")
-    pdf.ln(5)
-    
-    # Aba Integral
-    pdf.set_font("Arial", 'B', 12)
-    pdf.cell(200, 10, "2. Informativo do Integral", ln=True)
-    pdf.set_font("Arial", '', 10)
-    texto_integral = """Curitiba, 23 de fevereiro de 2026. Reformulamos as aulas do Integral para tornar a rotina ainda mais rica... (incluir todo o texto aqui)"""
-    pdf.multi_cell(0, 5, texto_integral)
-    
-    return pdf.output(dest='S').encode('latin-1', 'ignore')
-
-
