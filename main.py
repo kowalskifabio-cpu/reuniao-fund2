@@ -256,11 +256,4 @@ def gerar_pdf():
     
     return pdf.output(dest='S').encode('latin-1', 'ignore')
 
-# Botão de Download no Streamlit
-pdf_data = gerar_pdf()
-st.sidebar.download_button(
-    label="📥 Baixar Apresentação em PDF (Reserva)",
-    data=pdf_data,
-    file_name="Reuniao_Pedagogica_2026.pdf",
-    mime="application/pdf"
-)
+
