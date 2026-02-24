@@ -93,7 +93,7 @@ with tab2:
         st.write("**José Pedro**")
         st.caption("Geografia")
 
-    # Linha 2 de Professores (Incluindo Edson e Fernanda)
+    # Linha 2 de Professores
     cp5, cp6, cp7, cp8 = st.columns(4)
     with cp5:
         st.image("leo.jpg", width=150)
@@ -112,7 +112,7 @@ with tab2:
         st.write("**William**")
         st.caption("História")
 
-    # Linha 3 de Professores (Novos Professores)
+    # Linha 3 de Professores
     cp9, cp10, cp11, cp12 = st.columns(4)
     with cp9:
         st.image("Edson.jpg", width=150)
@@ -125,31 +125,31 @@ with tab2:
 
 with tab3:
     st.header("Informativo do Integral - manhã")
-    [cite_start]st.write("**Curitiba, 23 de fevereiro de 2026** [cite: 1, 2]")
-    [cite_start]st.write("Prezadas famílias e queridos alunos, [cite: 1, 3]")
-    [cite_start]st.write("Pensando sempre no aprendizado, no desenvolvimento integral e na qualidade de ensino, reformulamos as aulas do Integral para tornar a rotina ainda mais rica, dinâmica e significativa para nossos estudantes. [cite: 1, 4]")
-    [cite_start]st.write("A partir deste período, nossa grade de horários foi reorganizada, contemplando atividades diversificadas que estimulam o desenvolvimento cognitivo, social, emocional e criativo dos alunos. Convidamos todos a conferirem as novas grades de horário e as aulas disponíveis em cada ciclo. [cite: 1, 5]")
-    [cite_start]st.write("Confira as novidades do Integral: [cite: 1, 7]")
+    st.write("**Curitiba, 23 de fevereiro de 2026**")
+    st.write("Prezadas famílias e queridos alunos,")
+    st.write("Pensando sempre no aprendizado, no desenvolvimento integral e na qualidade de ensino, reformulamos as aulas do Integral para tornar a rotina ainda mais rica, dinâmica e significativa para nossos estudantes[cite: 1, 4].")
+    st.write("A partir deste período, nossa grade de horários foi reorganizada, contemplando atividades diversificadas que estimulam o desenvolvimento cognitivo, social, emocional e criativo dos alunos. Convidamos todos a conferirem as novas grades de horário e as aulas disponíveis em cada ciclo[cite: 1, 5, 6].")
+    st.write("Confira as novidades do Integral[cite: 1, 7]:")
     
     st.write("### 🧪 Atividades e Oficinas")
-    [cite_start]st.write("- **Experiência / Pequenos Cientistas**: No laboratório de Ciências, as crianças vivenciam experiências práticas e seguras, explorando fenômenos como misturas, reações simples, estados físicos da matéria, plantio e observação da natureza. De forma lúdica, aprendem a observar, levantar hipóteses e registrar descobertas, despertando a curiosidade científica desde cedo. [cite: 1, 8, 9]")
-    [cite_start]st.write("- **Produção Textual (4º e 5º ano)**: Espaço dedicado ao desenvolvimento da escrita criativa e formal, trabalhando diferentes gêneros textuais, ampliação de vocabulário, organização de ideias e aprimoramento da expressão escrita. [cite: 1, 10]")
-    [cite_start]st.write("- **Contação de Histórias**: Momento de imaginação e encantamento, estimulando a escuta atenta, a interpretação e o gosto pela leitura. [cite: 1, 11]")
-    [cite_start]st.write("- **Iniciação Teatral**: Atividades que desenvolvem expressão corporal, oralidade, criatividade, autoconfiança e trabalho em grupo por meio de jogos e práticas teatrais. [cite: 1, 12]")
-    [cite_start]st.write("- **Oficina Criativa**: Exploração artística com diferentes materiais e técnicas, incentivando a criatividade, coordenação motora e expressão individual. [cite: 1, 13]")
-    [cite_start]st.write("- **Xadrez**: Desenvolvimento da concentração, planejamento, paciência e tomada de decisões estratégicas. [cite: 1, 14]")
-    [cite_start]st.write("- **Projeto**: Momento destinado a pesquisas, desenvolvimento de trabalhos interdisciplinares e aprofundamento de conteúdos. [cite: 1, 15]")
-    [cite_start]st.write("- **Culinária (quinzenal)**: Atividade prática que trabalha medidas, organização, autonomia, alimentação saudável e cooperação, além de proporcionar experiências sensoriais. [cite: 1, 16]")
-    [cite_start]st.write("- **Musicalização**: Vivências com ritmo, canto, percepção sonora e expressão musical, contribuindo para o desenvolvimento cognitivo e sensível. [cite: 1, 17]")
-    [cite_start]st.write("- **Raciocínio Lógico e Estratégia (2º ao 5º ano)**: Desafios, jogos e situações-problema que estimulam o pensamento lógico, a resolução de problemas e a tomada de decisões. [cite: 1, 18]")
-    [cite_start]st.write("- **Horta**: Contato direto com a natureza, plantio, cuidados com a terra e aprendizagem sobre sustentabilidade e alimentação saudável. [cite: 1, 19]")
-    [cite_start]st.write("- **Esportes**: Atividades que promovem coordenação motora, trabalho em equipe, respeito às regras e hábitos saudáveis. [cite: 1, 20]")
+    st.write("- **Experiência / Pequenos Cientistas**: No laboratório de Ciências, as crianças vivenciam experiências práticas e seguras, explorando fenômenos como misturas, reações simples, estados físicos da matéria, plantio e observação da natureza. De forma lúdica, aprendem a observar, levantar hipóteses e registrar descobertas, despertando a curiosidade científica desde cedo[cite: 1, 8, 9].")
+    st.write("- **Produção Textual (4º e 5º ano)**: Espaço dedicado ao desenvolvimento da escrita criativa e formal, trabalhando diferentes gêneros textuais, ampliação de vocabulário, organização de ideias e aprimoramento da expressão escrita[cite: 1, 10].")
+    st.write("- **Contação de Histórias**: Momento de imaginação e encantamento, estimulando a escuta atenta, a interpretação e o gosto pela leitura[cite: 1, 11].")
+    st.write("- **Iniciação Teatral**: Atividades que desenvolvem expressão corporal, oralidade, criatividade, autoconfiança e trabalho em grupo por meio de jogos e práticas teatrais[cite: 1, 12].")
+    st.write("- **Oficina Criativa**: Exploração artística com diferentes materiais e técnicas, incentivando a criatividade, coordenação motora e expressão individual[cite: 1, 13].")
+    st.write("- **Xadrez**: Desenvolvimento da concentração, planejamento, paciência e tomada de decisões estratégicas[cite: 1, 14].")
+    st.write("- **Projeto**: Momento destinado a pesquisas, desenvolvimento de trabalhos interdisciplinares e aprofundamento de conteúdos[cite: 1, 15].")
+    st.write("- **Culinária (quinzenal)**: Atividade prática que trabalha medidas, organização, autonomia, alimentação saudável e cooperação, além de proporcionar experiências sensoriais[cite: 1, 16].")
+    st.write("- **Musicalização**: Vivências com ritmo, canto, percepção sonora e expressão musical, contribuindo para o desenvolvimento cognitivo e sensível[cite: 1, 17].")
+    st.write("- **Raciocínio Lógico e Estratégia (2º ao 5º ano)**: Desafios, jogos e situações-problema que estimulam o pensamento lógico, a resolução de problemas e a tomada de decisões[cite: 1, 18].")
+    st.write("- **Horta**: Contato direto com a natureza, plantio, cuidados com a terra e aprendizagem sobre sustentabilidade e alimentação saudável[cite: 1, 19].")
+    st.write("- **Esportes**: Atividades que promovem coordenação motora, trabalho em equipe, respeito às regras e hábitos saudáveis[cite: 1, 20].")
     
     st.write("---")
-    [cite_start]st.write("Além das aulas, os alunos continuam contando com momentos de descontração, café, descanso e almoço, garantindo equilíbrio entre aprendizagem e bem-estar. [cite: 1, 21]")
-    [cite_start]st.write("Estamos muito animados com essa nova organização e confiantes de que ela proporcionará experiências ainda mais significativas para nossos alunos. [cite: 1, 22]")
-    [cite_start]st.write("Contamos com a parceria de sempre! [cite: 1, 23]")
-    [cite_start]st.write("**Com carinho, Equipe do Integral** [cite: 1, 24]")
+    st.write("Além das aulas, os alunos continuam contando com momentos de descontração, café, descanso e almoço, garantindo equilíbrio entre aprendizagem e bem-estar[cite: 1, 21].")
+    st.write("Estamos muito animados com essa nova organização e confiantes de que ela proporcionará experiências ainda mais significativas para nossos alunos[cite: 1, 22].")
+    st.write("Contamos com a parceria de sempre! [cite: 1, 23]")
+    st.write("**Com carinho, Equipe do Integral** [cite: 1, 24]")
 
 with tab4:
     st.header("Orientações Educacionais e Avisos")
@@ -219,4 +219,4 @@ with tab8:
         <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://reuniao-pais-2026.streamlit.app" width="200">
     </div>
     """, unsafe_allow_html=True)
-    st.link_button("Abrir Formulário no Navegador", "https://docs.google.com/forms/d/e/1FAIpQLScT_SeuFormularioOriginalAqui")
+    st.link_button("Abrir Formulário no Navegador", "https://docs.google.com/forms/d/e/SeuFormularioOriginalAqui")
