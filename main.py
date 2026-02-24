@@ -212,7 +212,7 @@ with tab7:
     st.write("### 🧪 Feira de Ciências")
     st.write("Projeto voltado para a experimentação e investigação científica.")
     st.write("---")
-    st.write("### 🎨 Literart")
+    st.write("### 🎨 Literarte")
     st.write("Projeto integrador que une literatura e artes visuais.")
     st.write("---")
     st.write("### 🧠 Sala de Recursos (Neurodivergentes)")
