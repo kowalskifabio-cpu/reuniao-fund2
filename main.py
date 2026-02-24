@@ -196,6 +196,12 @@ with tab6:
     st.latex(r'''\text{Média} = \frac{P1 (\text{Atividades Formativas}) + P2 (\text{Prova Bimestral})}{2}''')
     st.write("- **P1 (10,0):** Trabalhos, pesquisas, testes e atividades formativas.")
     st.write("- **P2 (10,0):** Prova bimestral.")
+    
+    st.write("---")
+    st.write("### 💻 Disciplinas Especiais")
+    st.warning("Para esse ano de 2026, a disciplina cultura maker passou por alteração de nomenclatura, porém continua utilizando o mesmo material de Cultura Maker, sendo desenvolvida de acordo com a BNCC.")
+    st.warning("Neste ano, a disciplina será educação digital passará a compor nota Fundamental 1 e 2 considerando tanto a participação coletiva quanto à participação individual dos alunos em sala de aula.")
+    
     st.write("---")
     st.write("### 💻 Sistema Notas Online (www.notasonline.com)")
     st.error("Registros incluem: desentendimento, desrespeito, dano material, atrasos e uniforme incompleto.")
